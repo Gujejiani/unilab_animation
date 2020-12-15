@@ -1,0 +1,55 @@
+body {
+  background-color: #f6f6f6;
+  width: 100%;
+}
+
+.car-container {
+  border-bottom: 5px solid black;
+}
+
+.car {
+  animation-name: engineON;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+.stop {
+  position: relative;
+  top: -183px;
+  left: 1200px;
+}
+.traffic {
+  position: absolute;
+  width: 20px;
+  height: 180px;
+  background-color: rgb(17, 1, 1);
+}
+.traffic-light {
+  position: absolute;
+  animation-name: light;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  left: -20px;
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: rgb(16, 243, 16);
+}
+
+@keyframes engineON {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(800px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes light {
+  100% {
+    background-color: red;
+  }
+}
